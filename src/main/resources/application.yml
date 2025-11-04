@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: MSConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://D:/documentos_wind11/Desktop/Arka/config_server_files
+          #uri: file://${user.home}/Desktop/Arka/config_server_files
+          default-label: main
+          clone-on-start: true
+  security:
+    user:
+      name: admin
+      password: admin123
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin123@localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    registry-fetch-interval-seconds: 30
+    eureka-server-connect-timeout-seconds: 10
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
