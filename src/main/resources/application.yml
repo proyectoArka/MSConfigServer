@@ -5,8 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: file://D:/documentos_wind11/Desktop/Arka/config_server_files
-          #uri: file://${user.home}/Desktop/Arka/config_server_files
+          uri: file:///C:/Users/User/Documents/ProyectosJava/Arka/config_server_files
           default-label: main
           clone-on-start: true
   security:
