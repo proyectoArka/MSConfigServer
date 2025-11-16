@@ -12,7 +12,6 @@ spring:
       enabled: true
       refresh:
         enabled: true
-
   security:
     user:
       name: admin
@@ -28,9 +27,11 @@ management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh,refresh,health,info,metrics
+        include: busrefresh,refresh,health,info,metrics
     base-path: /actuator
   endpoint:
+    busrefresh:
+      enabled: true
     health:
       show-details: always
 
